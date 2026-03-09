@@ -1,0 +1,44 @@
+import { exportToExcel } from "../utils/exportExcel";
+
+function StudentTable({ students, deleteStudent, setEditStudent }) {
+  return (
+    <div>
+      <button className="excelBtn" onClick={() => exportToExcel(students)}>
+        Download Excel
+      </button>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Age</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          {students.map((s) => (
+            <tr key={s.id}>
+              <td>{s.name}</td>
+              <td>{s.email}</td>
+              <td>{s.age}</td>
+
+              <td>
+                <button className="edit" onClick={() => setEditStudent(s)}>
+                  Edit
+                </button>
+
+                <button className="delete" onClick={() => deleteStudent(s.id)}>
+                  Delete
+                </button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
+export default StudentTable;
