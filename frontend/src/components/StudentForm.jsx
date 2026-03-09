@@ -31,6 +31,19 @@ function StudentForm({ addStudent, editStudent, updateStudent }) {
       alert("Invalid Email");
       return false;
     }
+    const nameRegex = /^[A-Za-z\s]{2,}$/;
+
+    if (!nameRegex.test(form.name)) {
+      alert("Invalid Name (Only letters allowed)");
+      return false;
+    }
+
+    const ageRegex = /^(?:1[01][0-9]|120|[1-9][0-9]?)$/;
+
+    if (!ageRegex.test(form.age)) {
+      alert("Invalid Age (Enter age between 1 and 120)");
+      return false;
+    }
 
     return true;
   };
