@@ -83,7 +83,7 @@ function App() {
               </svg>
             </div>
             <span className="text-xs font-semibold tracking-[0.2em] text-amber-400 uppercase">
-              Academia
+              Arun Academia
             </span>
           </div>
           <h1 className="text-4xl font-bold text-white tracking-tight">
