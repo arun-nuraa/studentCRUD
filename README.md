@@ -4,6 +4,10 @@
 
 This is a Students Table Management Application built using React (Vite). The project works completely on the frontend and performs CRUD operations (Create, Read, Update, Delete) using React state and browser localStorage without any backend.
 
+**Live Demo**
+
+https://student-crud-r6s3.vercel.app/
+
 **Tech Stack**
 
 - React.js (Vite)
@@ -21,7 +25,7 @@ This is a Students Table Management Application built using React (Vite). The pr
 - Simulated loading state
 - Download student data as Excel (filtered or full data)
 
- **Data Storage**
+  **Data Storage**
 
 Student data is stored in browser localStorage, allowing the data to remain even after refreshing the page.
 
